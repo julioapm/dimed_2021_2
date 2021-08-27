@@ -1,0 +1,6 @@
+<h2>Todos Posts</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <span>{{post.id}} - {{post.title | uppercase}}</span>
+  </li>
+</ul>
