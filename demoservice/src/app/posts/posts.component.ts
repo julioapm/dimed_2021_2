@@ -10,14 +10,20 @@ import { Observable, of } from 'rxjs';
 })
 export class PostsComponent implements OnInit {
   posts$: Observable<Post[]>;
+  userId: number;
 
   constructor(private postsService: PostsService) {
     this.posts$ = of([]);
+    this.userId = 1;
   }
 
   ngOnInit(): void {
     //this.posts$ = this.postsService.buscarTodosPosts();
-    this.posts$ = this.postsService.buscarPostPorUserId(1);
+    this.posts$ = this.postsService.buscarPostPorUserId(this.userId);
+  }
+
+  getPosts() {
+    this.posts$ = this.postsService.buscarPostPorUserId(this.userId);
   }
 
 }
