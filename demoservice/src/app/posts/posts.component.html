@@ -1,0 +1,7 @@
+<h2>Todos Posts de um Usuário</h2>
+
+<ul>
+  <li *ngFor="let post of posts$ | async">
+    <span>{{post.id}} - {{post.title | uppercase}}</span>
+  </li>
+</ul>
