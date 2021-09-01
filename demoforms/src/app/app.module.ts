@@ -12,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { PaginanaoencontradaComponent } from './paginanaoencontrada/paginanaoencontrada.component';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PaginanaoencontradaComponent } from './paginanaoencontrada/paginanaoenc
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    UsuariosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
