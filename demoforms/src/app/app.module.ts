@@ -13,16 +13,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { PaginanaoencontradaComponent } from './paginanaoencontrada/paginanaoencontrada.component';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { BoasvindasComponent } from './boasvindas/boasvindas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavegacaoComponent,
-    PaginanaoencontradaComponent
+    PaginanaoencontradaComponent,
+    BoasvindasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -30,7 +31,8 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    UsuariosModule
+    UsuariosModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
