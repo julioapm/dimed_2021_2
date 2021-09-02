@@ -8,11 +8,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { UsuariosDetalheComponent } from './usuarios-detalhe/usuarios-detalhe.component';
 
 @NgModule({
   declarations: [
     UsuariosCadastroComponent,
-    UsuariosListaComponent
+    UsuariosListaComponent,
+    UsuariosDetalheComponent
   ],
   imports: [
     CommonModule,
