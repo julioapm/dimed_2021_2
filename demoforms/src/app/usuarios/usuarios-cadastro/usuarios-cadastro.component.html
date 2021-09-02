@@ -1,11 +1,28 @@
 <h2>Cadastro de Usuário</h2>
-<form [formGroup]="dadosUsuarioForm" (ngSubmit)="onSubmit()">
-  <mat-form-field>
-    <mat-label>Nome</mat-label>
-    <input matInput formControlName="name" required maxlength="100">
-    <mat-error *ngIf="dadosUsuarioForm.controls['name'].hasError('required') ||
+<form [formGroup]="dadosUsuarioForm" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name" required maxlength="100">
+      <mat-error *ngIf="dadosUsuarioForm.controls['name'].hasError('required') ||
                       dadosUsuarioForm.controls['name'].hasError('maxlength')">
-      O nome é obrigatório e deve ter no máximo 100 caracteres.
-    </mat-error>
-  </mat-form-field>
+        O nome é obrigatório e deve ter no máximo 100 caracteres.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Profissão</mat-label>
+      <mat-select formControlName="job">
+        <mat-option>Selecione uma profissão</mat-option>
+        <mat-option value="Desenvolvedor">Desenvolvedor</mat-option>
+        <mat-option value="Analista">Analista</mat-option>
+        <mat-option value="Gerente">Gerente</mat-option>
+        <mat-option value="Outro">Outro</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button [disabled]="!dadosUsuarioForm.valid">Enviar</button>
+  </div>
 </form>
