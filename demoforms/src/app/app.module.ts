@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { PaginanaoencontradaComponent } from './paginanaoencontrada/paginanaoencontrada.component';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { BoasvindasComponent } from './boasvindas/boasvindas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { BoasvindasComponent } from './boasvindas/boasvindas.component';
     MatIconModule,
     MatListModule,
     ReactiveFormsModule,
+    HttpClientModule,
     UsuariosModule,
     AppRoutingModule,
   ],
