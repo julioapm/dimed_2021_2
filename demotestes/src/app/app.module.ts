@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './components/calculadora/calculadora.component';
+import { SpringsecurityComponent } from './components/springsecurity/springsecurity.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    SpringsecurityComponent
   ],
   imports: [
     BrowserModule,
