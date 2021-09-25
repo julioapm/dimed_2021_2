@@ -20,6 +20,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
+			.cors()
+			.and()
 			.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
 			.and()
 			.authorizeRequests().anyRequest().authenticated()
@@ -42,5 +44,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				.roles("ADMIN")
 				.build();
 		return new InMemoryUserDetailsManager(user, admin);
-	}
+	}	
 }
